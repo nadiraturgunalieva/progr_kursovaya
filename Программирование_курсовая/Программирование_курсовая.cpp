@@ -117,31 +117,38 @@ int main() {
         case 1:
             stack.print();
             break;
+
         case 2:
             int value;
             std::cout << "Введите значение нового элемента: ";
             std::cin >> value;
             stack.push(value);
             break;
+
         case 3:
             stack.pop();
             stack.print();
             break;
+
         case 4:
             stack.remove();
             break;
+
         case 5:
             std::cout << "Длина стека: " << stack.length() << std::endl;
             break;
+
         case 6:
             {
             Stack copyStack(stack);  // создание нового объекта copyStack с помощью конструктора копирования
             std::cout << "Стек скопирован." << std::endl;
             }
         break;
+
         case 7:
             std::cout << "Осуществляется выход из программы..." << std::endl;
             return 0;
+
         default:
             std::cout << "Неверный выбор. Попробуйте снова." << std::endl;
             break;
