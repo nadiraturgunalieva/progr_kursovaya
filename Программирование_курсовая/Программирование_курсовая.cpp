@@ -140,7 +140,7 @@ int main() {
 
         case 6:
             {
-            Stack copyStack(stack);  // создание нового объекта copyStack с помощью конструктора копирования
+            Stack copyStack(stack);  // создание нового объекта copyStack с помощью конструктора копирования, который мы определили в классе Stack
             std::cout << "Стек скопирован." << std::endl;
             }
         break;
