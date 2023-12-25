@@ -103,7 +103,7 @@ int main() {
     int choice = 0;
     while (true) {
         std::cout << std::endl << "Список операций: " << std::endl << std::endl;
-        std::cout << "1. Вывести стек в терминал" << std::endl;
+        std::cout << "1. Вывести стек на экран" << std::endl;
         std::cout << "2. Добавить элемент" << std::endl;
         std::cout << "3. Удалить элемент и вывести на экран" << std::endl;
         std::cout << "4. Удалить весь стек" << std::endl;
