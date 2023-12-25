@@ -44,7 +44,7 @@ public:
 
     void push(int value) {
         if (stack.size() >= max_size) {
-            std::cout << "Стек переполнен." << std::endl;
+            std::cout << "Стек переполнен. Невозможно добавить больше значений." << std::endl;
             return;
         }
 
