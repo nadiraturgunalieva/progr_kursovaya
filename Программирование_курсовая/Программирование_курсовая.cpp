@@ -2,6 +2,7 @@
 #include <list>
 #include <stack>
 
+
 class Node {
 public:
     int key;
@@ -25,6 +26,14 @@ private:
 public:
     Stack(int max) {
         max_size = max;
+    }
+
+    Stack(const Stack& other) {
+        max_size = other.max_size;
+        for (Node* node : other.stack) {
+            Node* newNode = new Node(node->key);
+            stack.push_back(newNode);
+        }
     }
 
     ~Stack() {
@@ -62,6 +71,7 @@ public:
         stack.clear();
         std::cout << "Стек удалён." << std::endl;
     }
+
 
     void print() {
         if (stack.empty()) {
@@ -124,17 +134,16 @@ int main() {
             std::cout << "Длина стека: " << stack.length() << std::endl;
             break;
         case 6:
-        {
-            Stack copyStack = stack;    // данный мув возможен, потому что вызывается конструктор копирования по умолчанию для stack
-                                        // он создает копию объекта, эквивалентную копии исходного объекта. 
+            {
+            Stack copyStack(stack);  // создание нового объекта copyStack с помощью конструктора копирования
             std::cout << "Стек скопирован." << std::endl;
-        }
+            }
         break;
         case 7:
             std::cout << "Осуществляется выход из программы..." << std::endl;
             return 0;
         default:
-            std::cout << "Неверный выбор." << std::endl;
+            std::cout << "Неверный выбор. Попробуйте снова." << std::endl;
             break;
         }
 
